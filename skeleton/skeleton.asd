@@ -6,7 +6,7 @@
                           (getf env :depends-on)) %>)
   :components ((:module "src"
                 :components
-                ((:file "main"))))
+                ((:file "<% @var name %>"))))
   :description "<% @var description %>"
   <%- @unless without-tests %>
   :in-order-to ((test-op (test-op "<% @var name %>/tests")))
@@ -19,6 +19,6 @@
                "rove")
   :components ((:module "tests"
                 :components
-                ((:file "main"))))
+                ((:file "<% @var name %>"))))
   :description "Test system for <% @var name %>"
   :perform (test-op (op c) (symbol-call :rove :run c)))

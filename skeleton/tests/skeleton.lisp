@@ -1,8 +1,8 @@
-(defpackage <% @var name %>/tests/main
+(defpackage <% @var name %>/tests/<% @var name %>
   (:use :cl
         :<% @var name %>
         :rove))
-(in-package :<% @var name %>/tests/main)
+(in-package :<% @var name %>/tests/<% @var name %>)
 
 ;; NOTE: To run this test file, execute `(asdf:test-system :<% @var name %>)' in your Lisp.
 
